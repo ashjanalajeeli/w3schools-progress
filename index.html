@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>لوحة تقدّم W3Schools</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <span class="eyebrow">W3SCHOOLS · LEARNING TRACKER</span>
+        <h1>لوحة تقدّم التعلّم</h1>
+        <p>نظرة سريعة على الموضوعات التي أنجزتها، مرتبة بطريقة تساعدك على معرفة خطوتك التالية.</p>
+      </div>
+      <div class="hero-mark" aria-hidden="true">↗</div>
+    </header>
+
+    <section class="stats" aria-label="ملخص التقدم">
+      <article class="stat-card accent-blue"><span>إجمالي الدروس</span><strong id="total">—</strong><small>درسًا مكتملًا</small></article>
+      <article class="stat-card accent-purple"><span>عدد المسارات</span><strong id="tracks">—</strong><small>مسارات تعليمية</small></article>
+      <article class="stat-card accent-orange"><span>أعلى تقدّم</span><strong id="top">—</strong><small id="topValue">—</small></article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel chart-panel">
+        <div class="panel-heading"><div><span class="section-kicker">التوزيع</span><h2>التقدّم حسب المسار</h2></div><span class="pill">مكتمل</span></div>
+        <div id="bars" class="bar-chart" role="img" aria-label="مخطط أعمدة للتقدم حسب المسار"></div>
+      </article>
+      <article class="panel ring-panel">
+        <div class="panel-heading"><div><span class="section-kicker">الصورة الكاملة</span><h2>حصة كل مسار</h2></div></div>
+        <div class="ring-wrap"><div id="ring" class="ring"><div class="ring-label"><strong id="ringTotal">—</strong><span>الإجمالي</span></div></div></div>
+        <div id="legend" class="legend"></div>
+      </article>
+    </section>
+
+    <section class="panel table-panel">
+      <div class="panel-heading"><div><span class="section-kicker">تفاصيل</span><h2>قائمة التقدّم</h2></div><span id="updated" class="muted">المصدر: progress.json</span></div>
+      <div class="progress-list" id="progressList"></div>
+    </section>
+    <footer>يتم تحميل البيانات تلقائيًا من ملف <code>progress.json</code></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
