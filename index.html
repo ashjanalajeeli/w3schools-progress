@@ -3,46 +3,92 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>لوحة تقدّم W3Schools</title>
+  <meta name="theme-color" content="#f5f7fb">
+  <meta name="description" content="ملف أشجان العجيلي التعليمي، مع رسوم بيانية لمهارات ومسارات التعلّم.">
+  <title>الملف التعليمي | أشجان العجيلي</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="shell">
-    <header class="hero">
-      <div>
-        <span class="eyebrow">W3SCHOOLS · LEARNING TRACKER</span>
-        <h1>لوحة تقدّم التعلّم</h1>
-        <p>نظرة سريعة على الموضوعات التي أنجزتها، مرتبة بطريقة تساعدك على معرفة خطوتك التالية.</p>
+    <header class="profile-header panel">
+      <div class="identity">
+        <div class="avatar-wrap">
+          <img class="avatar" src="https://github.com/ashjanalajeeli.png?size=180" alt="الصورة الشخصية لأشجان العجيلي" width="88" height="88">
+          <span class="online-dot" aria-hidden="true"></span>
+        </div>
+        <div class="identity-copy">
+          <span class="eyebrow">LEARNING PROFILE · W3SCHOOLS</span>
+          <h1>أشجان العجيلي</h1>
+          <p>مساحة واحدة تجمع المهارات ومسارات التعلّم والإنجازات في رسوم واضحة.</p>
+          <a class="profile-link" href="https://github.com/ashjanalajeeli" target="_blank" rel="noreferrer">عرض الملف على GitHub <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
-      <div class="hero-mark" aria-hidden="true">↗</div>
+      <div class="profile-note">
+        <span class="note-icon" aria-hidden="true">✦</span>
+        <span>التعلّم والمهارات<br><strong>ضمن الملف الشخصي</strong></span>
+      </div>
     </header>
 
-    <section class="stats" aria-label="ملخص التقدم">
-      <article class="stat-card accent-blue"><span>إجمالي الدروس</span><strong id="total">—</strong><small>درسًا مكتملًا</small></article>
-      <article class="stat-card accent-purple"><span>عدد المسارات</span><strong id="tracks">—</strong><small>مسارات تعليمية</small></article>
-      <article class="stat-card accent-orange"><span>أعلى تقدّم</span><strong id="top">—</strong><small id="topValue">—</small></article>
+    <section class="stats" aria-label="ملخص التقدم التعليمي">
+      <article class="stat-card accent-blue">
+        <span>الدروس المنجزة</span>
+        <strong id="total">—</strong>
+        <small>عبر جميع المسارات</small>
+      </article>
+      <article class="stat-card accent-purple">
+        <span>مسارات التعلّم</span>
+        <strong id="tracks">—</strong>
+        <small>مسارات قيد المتابعة</small>
+      </article>
+      <article class="stat-card accent-orange">
+        <span>المسار الأكثر إنجازًا</span>
+        <strong id="top">—</strong>
+        <small id="topValue">—</small>
+      </article>
     </section>
 
-    <section class="dashboard-grid">
-      <article class="panel chart-panel">
-        <div class="panel-heading"><div><span class="section-kicker">التوزيع</span><h2>التقدّم حسب المسار</h2></div><span class="pill">مكتمل</span></div>
-        <div id="bars" class="bar-chart" role="img" aria-label="مخطط أعمدة للتقدم حسب المسار"></div>
-      </article>
-      <article class="panel ring-panel">
-        <div class="panel-heading"><div><span class="section-kicker">الصورة الكاملة</span><h2>حصة كل مسار</h2></div></div>
-        <div class="ring-wrap"><div id="ring" class="ring"><div class="ring-label"><strong id="ringTotal">—</strong><span>الإجمالي</span></div></div></div>
-        <div id="legend" class="legend"></div>
-      </article>
+    <section class="learning-section" aria-labelledby="learning-title">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">المهارات والتعلّم</span>
+          <h2 id="learning-title">رحلتي التعليمية بالأرقام</h2>
+          <p>تعرض الرسوم عدد الدروس المنجزة وتوزيعها بين المسارات، ولا تمثل تقييمًا لمستوى الإتقان.</p>
+        </div>
+        <span class="data-badge"><span class="status-dot" aria-hidden="true"></span> تتحدث من ملف التقدم</span>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="panel chart-panel">
+          <div class="panel-heading">
+            <div><span class="section-kicker">مقارنة المسارات</span><h3>الدروس المنجزة حسب المهارة</h3></div>
+            <span class="chart-icon" aria-hidden="true">▥</span>
+          </div>
+          <div id="bars" class="bar-chart" role="img" aria-label="مخطط أعمدة للدروس المنجزة حسب المسار" aria-live="polite"></div>
+          <p class="chart-caption">طول العمود يعبّر عن عدد الدروس المسجلة في كل مسار.</p>
+        </article>
+
+        <article class="panel ring-panel">
+          <div class="panel-heading">
+            <div><span class="section-kicker">حصة التعلّم</span><h3>توزيع الإنجاز</h3></div>
+            <span class="chart-icon purple-icon" aria-hidden="true">◉</span>
+          </div>
+          <div class="ring-wrap">
+            <div id="ring" class="ring" role="img" aria-label="مخطط دائري لتوزيع الدروس المنجزة">
+              <div class="ring-label"><strong id="ringTotal">—</strong><span>درسًا منجزًا</span></div>
+            </div>
+          </div>
+          <div id="legend" class="legend" role="list" aria-label="تفاصيل توزيع المسارات"></div>
+        </article>
+      </div>
     </section>
 
-    <section class="panel table-panel">
-      <div class="panel-heading"><div><span class="section-kicker">تفاصيل</span><h2>قائمة التقدّم</h2></div><span id="updated" class="muted">المصدر: progress.json</span></div>
-      <div class="progress-list" id="progressList"></div>
-    </section>
-    <footer>يتم تحميل البيانات تلقائيًا من ملف <code>progress.json</code></footer>
+    <footer>
+      <span>ملف البيانات: <code>progress.json</code></span>
+      <span>الرسوم جزء من هذا الملف التعليمي، وليست صفحة منفصلة.</span>
+    </footer>
   </main>
   <script src="app.js"></script>
 </body>
